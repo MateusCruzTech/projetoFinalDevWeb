@@ -1,0 +1,23 @@
+Integrantes: Mateus Henrique, Diego Francisco, Davi Penna
+Tema: Lugares culturais em belo horizonte e região separado por categorias
+Descrição: Website que mostra pontos culturais de acordo com a categoria, sendo dividido em 8 categorias, sendo eles:
+
+* Gastronomia
+* Cultura
+* Música
+* Geek
+* Natureza
+* Vida Noturna
+* Eventos
+* Arte
+
+A pagina home deve conter os seguintes elementos:
+* Um cabeçalho com a logo e links para explorar, categorias e mapa
+* Um footer com logo, sobre nós e projeto.
+
+Ao clicar em uma categoria, será mostrado em cards os lugares que bate com aquela categoria filtrada
+
+Nos cards dos lugares deve ser mostrado o nome do local, a localização, uma pequena descrição e uma imagem do local. Ao clicar em cima de algum card, uma nova guia deve ser aberta para mostrar as informações do local em especifico, nela deve conter: 4 imagens sendo exibidas Nome do local no título Localização e categoria do local Uma descrição do local As avaliações que o local possui com base nas estrelas
+Ao todo são 12 paginas replicando o mesmo elemento, mudando apenas as informações específicas daquele local
+
+Criar uma página Sobre Nós mostrando as informações de cada integrante do membro
