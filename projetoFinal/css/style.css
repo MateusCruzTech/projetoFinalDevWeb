@@ -1,0 +1,266 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: #FFFFFF;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;    
+    padding: 10px 20px;    
+
+}
+.menus{
+    display: flex;
+    gap: 30px;
+
+}
+
+.menus a {
+    text-decoration: none;
+    color: #333;
+}
+
+.logoMenu {
+    max-width: 250px; 
+    height: auto;
+}
+
+
+.bannerContainer {
+    position: relative;
+    width: 100%;
+    height: 540px;     
+    overflow: hidden;   
+}
+
+
+.containerImgHome {
+    width: 100%;     
+    height: 540px;     
+    object-fit: cover; 
+    object-position: center;
+    display: block;   
+}
+
+.bannerContainer::after {
+    content: '';       
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;       
+    background-color: rgba(0, 0, 0, 0.4);  
+    pointer-events: none;
+}
+
+.categoriasContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    gap: 15px;
+    flex-wrap: wrap; 
+    padding: 20px;
+}
+
+.categoriasContainer li{
+    list-style: none;
+}
+
+.categoria-card {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    text-align: center;
+    gap: 10px;     
+    padding-bottom: 40px;
+}
+
+.categoria-card i {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    
+    width: 60px;             
+    height: 60px;           
+    background-color: #f0f0f0; 
+    border-radius: 12px;    
+    
+    color: #333333;          
+    font-size: 24px;         
+    
+    transition: all 0.3s ease;
+    
+}
+
+
+.categoria-card span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+
+
+.categoria-card:hover i {
+    background-color: #333333; 
+    color: #ffffff;            
+}
+
+h2{
+    text-align: center;
+    padding-top: 40px; 
+}
+
+p {
+    text-align: center;
+    padding: 20px;
+}
+
+.containerDestaques{
+    background: #FAF9F6;
+      flex-wrap: wrap;
+}
+
+.containerDestaques h2 {
+    text-align: start;
+    margin-left: 220px;
+}
+.containerDestaques p {
+    text-align: start;
+    margin-left: 200px;
+}
+
+
+.img_lugares{
+    
+   
+    object-fit: cover; 
+    object-position: center;
+    display: block;   
+}
+
+.lugaresContainer {
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    list-style: none;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.lugares-card {
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF; 
+    border-radius: 20px; 
+    width: 265px;     
+    overflow: hidden;
+}
+
+.lugares-card img {
+    width: 100%;       
+    height: 150px;     
+    object-fit: cover; 
+    object-position: center;
+}
+
+
+
+.lugares-card span, 
+.localizacao {
+    margin: 10px;
+    color: #71717A; 
+    font-size: 15px;
+
+}
+
+.localizacao {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.localizacao span {
+    margin: 0; 
+}
+
+.lugares-card .tituloLocalDestaque {
+    font-weight: 700;
+    font-size: 18px;
+    color: #000000; 
+}
+
+.localizacao i, .localizacao span:first-of-type{
+    white-space: nowrap;
+}
+
+.outro{
+    background: #004F3B;
+    height: 20vh;
+}
+
+footer {
+    background: #1C1C1C;
+}
+
+.containerFooter{
+    display: flex;
+    font-size: 15px;
+     justify-content: space-around;
+     color: #71717A;
+}
+
+.containerElementosEsq{
+    display: flex;
+    flex-direction: column;
+    padding-left: 150px;
+}
+
+.container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.logoMenu{
+   
+}
+
+.containerIcon p {
+    text-align: start;
+}
+
+.redesSociais{
+      margin-left: 20px;
+      font-size: 30px;
+}
+
+.logoFooter{
+    max-width: 270px; 
+    height: auto;
+    margin-left: -42px;
+}
+
+.menusFooter{
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    align-items: center;
+    margin-right: 100px;
+   
+}
+
+.menusFooter a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 700;
+}
