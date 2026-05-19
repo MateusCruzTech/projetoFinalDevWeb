@@ -19,6 +19,7 @@ header{
 .menus{
     display: flex;
     gap: 30px;
+    flex-wrap: wrap;
 
 }
 
@@ -129,12 +130,13 @@ p {
 }
 
 .containerDestaques h2 {
-    text-align: start;
-    margin-left: 220px;
+    text-align: center; 
+    margin: 0;
 }
 .containerDestaques p {
-    text-align: start;
-    margin-left: 200px;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
 }
 
 
@@ -204,13 +206,34 @@ p {
     white-space: nowrap;
 }
 
-.outro{
+.containerFormulario{
     background: #004F3B;
-    height: 20vh;
+    text-align: center;
+    padding: 60px;
 }
+
+
+
+.containerFormulario p{
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+.containerFormulario a{
+    text-decoration: none;
+    color: #000000;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
 
 footer {
     background: #1C1C1C;
+
 }
 
 .containerFooter{
@@ -218,12 +241,13 @@ footer {
     font-size: 15px;
      justify-content: space-around;
      color: #71717A;
+     padding-top: 30px;
 }
 
 .containerElementosEsq{
     display: flex;
     flex-direction: column;
-    padding-left: 150px;
+    padding: 0 20px;
 }
 
 .container{
@@ -231,9 +255,6 @@ footer {
     margin-bottom: 10px;
 }
 
-.logoMenu{
-   
-}
 
 .containerIcon p {
     text-align: start;
@@ -253,9 +274,10 @@ footer {
 .menusFooter{
     display: flex;
     flex-direction: row;
-    gap: 150px;
+    gap: 30px; 
     align-items: center;
-    margin-right: 100px;
+    flex-wrap: wrap; 
+    justify-content: center;
    
 }
 
@@ -263,4 +285,52 @@ footer {
     text-decoration: none;
     color: #FFFFFF;
     font-weight: 700;
+}
+
+
+@media (max-width: 768px) {
+    
+
+    .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .bannerContainer, 
+    .containerImgHome {
+        height: 350px; 
+    }
+
+    .lugaresContainer {
+        gap: 30px;
+    }
+
+    .containerFooter {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .containerElementosEsq {
+        align-items: center;
+    }
+    
+    .containerIcon p {
+        text-align: center;
+    }
+
+    .redesSociais {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
