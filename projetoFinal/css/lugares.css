@@ -389,3 +389,9 @@ footer {
     font-weight: 700;
 }
 
+#contadorCaracteres {
+    margin-top: 5px;
+    text-align: right;
+    color: #666;
+    font-size: 14px;
+}

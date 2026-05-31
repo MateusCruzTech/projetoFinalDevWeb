@@ -116,7 +116,7 @@
 
         </div>
 
-     
+
         <div class="comentariosDinamicos"></div>
 
         <div class="inputAvaliacao">
@@ -142,6 +142,7 @@
 
             <div class="containerTexto">
                 <textarea id="comment"></textarea>
+                <p id="contadorCaracteres">0 / 3000</p>
             </div>
 
             <input id="enviarAvaliacao" class="enviarAvaliacao" type="button" value="Enviar avaliação">
@@ -182,7 +183,12 @@
 
 
 <script>
+const textarea = document.getElementById("comment");
+const contador = document.getElementById("contadorCaracteres");
 
+textarea.addEventListener("input", function () {
+    contador.textContent = `${textarea.value.length} / 3000`;
+});
     document
         .getElementById("enviarAvaliacao")
         .addEventListener("click", function () {
@@ -205,6 +211,10 @@
                 return;
             }
 
+            if (texto.length > 3000) {
+                alert("O comentário deve ter no máximo 3000 caracteres.");
+                return;
+            }
             const nota =
                 Number(
                     estrela.id.replace("estrela", "")
