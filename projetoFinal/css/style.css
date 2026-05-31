@@ -6,7 +6,9 @@
 }
 
 header{
-    background-color: #FFFFFF;
+    background-color: #004F3B;
+        padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .container {
@@ -25,9 +27,21 @@ header{
 
 .menus a {
     text-decoration: none;
-    color: #333;
+    color: #000000;
+    font-weight: 300;
 }
 
+.menus a i {
+    margin-right: 5px;
+}
+
+.menus a:hover{
+    color: #f0f0f0;
+}
+.menus a,
+.menus a i {
+    transition: 0.3s;
+}
 .logoMenu {
     max-width: 250px; 
     height: auto;
@@ -81,6 +95,7 @@ header{
     text-align: center;
     gap: 10px;     
     padding-bottom: 40px;
+    cursor: pointer;
 }
 
 .categoria-card i {
@@ -127,7 +142,9 @@ p {
 .containerDestaques{
     background: #FAF9F6;
       flex-wrap: wrap;
+      cursor: pointer;
 }
+
 
 .containerDestaques h2 {
     text-align: center; 
@@ -175,6 +192,10 @@ p {
     object-position: center;
 }
 
+.lugares-card:hover {
+    transform: scale(1.10);    
+      transition: 0.3s;  
+}
 
 
 .lugares-card span, 
@@ -250,10 +271,7 @@ footer {
     padding: 0 20px;
 }
 
-.container{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
+
 
 
 .containerIcon p {
@@ -333,4 +351,29 @@ footer {
 img {
     max-width: 100%;
     height: auto;
+}
+
+
+
+.containerSobre{
+    background: #004F3B;
+    text-align: center;
+    padding: 30px;
+}
+
+.containerSobre p{
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+}
+
+.containerSobre a{
+    text-decoration: none;
+    color: #000000;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 20px;
+    padding-left: 60px;
+    padding-right: 60px;
 }
