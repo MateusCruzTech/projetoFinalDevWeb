@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../css/lugares.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Mercado Central</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="containerIcon">
+                <img class="logoMenu" src="../.../../../../../images/logoProjeto.png" alt="Logo">
+            </div>
+
+            <div class="menus">
+                <a href=""><i class="fa-regular fa-compass"></i>Explorar</a>
+                <a href=""><i class="fa-solid fa-list"></i>Categorias</a>
+                <a href=""><i class="fa-regular fa-map"></i>Mapas</a>
+            </div>
+        </div>
+    </header>
+    <div class="containerImagens">
+
+        <div class="imagemMaior">
+            <img src="../.../../../../../images/1 Mercado Central/Daniela-Filomeno-doce-de-leite-minas-gerais.webp"
+                alt="">
+        </div>
+
+        <div class="ladoDireito">
+
+            <div class="imagensDuplas">
+                <div class="imagemDupla">
+                    <img src="../.../../../../../images/1 Mercado Central/20160527_085957.jpg" alt="">
+                </div>
+
+                <div class="imagemDupla">
+                    <img src="../.../../../../../images/1 Mercado Central/IMG_20171010_090912262.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="imagemMenor">
+                <img src="../.../../../../../images/1 Mercado Central/Mercado-Central-de-Belo-Horizonte-.jpg.webp"
+                    alt="">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="containerInfos">
+        <section class="informacoes">
+
+            <h1>Mercado Central</h1>
+
+            <div class="containerCategoria">
+                <p><i class="fa-solid fa-location-dot"></i>Centro-Sul</p>
+                <p class="categoria">Gastronomia</p>
+            </div>
+
+            <h2>Sobre o local</h2>
+
+            <p class="descricao">
+                Tradicional mercado famoso pelos queijos, artesanato, cachaças e pratos típicos como o fígado com jiló.
+                <br><br>
+                Belo Horizonte é repleta de lugares incríveis como Mercado Central. Este local oferece uma experiência
+                única que combina tradição, hospitalidade mineira e um toque de modernidade. Ideal para quem deseja
+                conhecer a verdadeira essência da cidade, desfrutar de bons momentos e criar memórias inesquecíveis.
+            </p>
+
+        </section>
+    </div>
+
+    <div class="containerAvaliacoes">
+
+        <p>
+            <i class="fa-solid fa-star"></i>
+            Avaliações (4.8)
+        </p>
+
+
+        <div class="comentariosFixos">
+
+            <div class="comentario">
+                <i class="fa-solid fa-user"></i>
+
+                <div>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry.
+                    </p>
+
+                    <div class="notaComentario">
+                        ★★★★★
+                    </div>
+                </div>
+            </div>
+
+            <div class="comentario">
+                <i class="fa-solid fa-user"></i>
+
+                <div>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry.
+                    </p>
+
+                    <div class="notaComentario">
+                        ★★★★☆
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+     
+        <div class="comentariosDinamicos"></div>
+
+        <div class="inputAvaliacao">
+
+            <div class="botaoAvaliacao">
+
+                <input type="radio" id="estrela5" name="avaliacao">
+                <label for="estrela5"><i class="fa-solid fa-star"></i></label>
+
+                <input type="radio" id="estrela4" name="avaliacao">
+                <label for="estrela4"><i class="fa-solid fa-star"></i></label>
+
+                <input type="radio" id="estrela3" name="avaliacao">
+                <label for="estrela3"><i class="fa-solid fa-star"></i></label>
+
+                <input type="radio" id="estrela2" name="avaliacao">
+                <label for="estrela2"><i class="fa-solid fa-star"></i></label>
+
+                <input type="radio" id="estrela1" name="avaliacao">
+                <label for="estrela1"><i class="fa-solid fa-star"></i></label>
+
+            </div>
+
+            <div class="containerTexto">
+                <textarea id="comment"></textarea>
+            </div>
+
+            <input id="enviarAvaliacao" class="enviarAvaliacao" type="button" value="Enviar avaliação">
+
+        </div>
+
+    </div>
+    </div>
+
+    <footer>
+        <div class="containerFooter">
+            <div class="containerElementosEsq">
+                <div class="containerIcon">
+                    <img class="logoFooter" src="../../../../images/logoProjeto.png" alt="Logo">
+                    <p>Descubra o melhor da cultura, gastronomia<br>
+                        e entretenimento da capital mineira com nossa<br>
+                        plataforma.</p>
+                </div>
+                <div class="redesSociais">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+
+                <p class="direitos">
+                    © 2026 BH Explorer. Todos os direitos reservados.
+                </p>
+            </div>
+            <div class="menusFooter">
+                <a href="">Projeto</a>
+                <a href="">Sobre nós</a>
+                <a href="">Mapas</a>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+
+<script>
+
+    document
+        .getElementById("enviarAvaliacao")
+        .addEventListener("click", function () {
+
+            const texto =
+                document.getElementById("comment").value;
+
+            const estrela =
+                document.querySelector(
+                    'input[name="avaliacao"]:checked'
+                );
+
+            if (!texto.trim()) {
+                alert("Digite uma avaliação.");
+                return;
+            }
+
+            if (!estrela) {
+                alert("Selecione uma nota.");
+                return;
+            }
+
+            const nota =
+                Number(
+                    estrela.id.replace("estrela", "")
+                );
+
+            const estrelas =
+                "★".repeat(nota) +
+                "☆".repeat(5 - nota);
+
+            const novoComentario =
+                document.createElement("div");
+
+            novoComentario.className =
+                "comentario";
+
+            novoComentario.innerHTML = `
+            <i class="fa-solid fa-user"></i>
+
+            <div>
+                <p>${texto}</p>
+
+                <div class="notaComentario">
+                    ${estrelas}
+                </div>
+            </div>
+        `;
+
+            document
+                .querySelector(".comentariosDinamicos")
+                .appendChild(novoComentario);
+
+            document
+                .getElementById("comment")
+                .value = "";
+
+            estrela.checked = false;
+        });
+
+</script>
+
+</html>
