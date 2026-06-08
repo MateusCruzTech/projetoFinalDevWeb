@@ -6,7 +6,7 @@ INTEGRANTES DA EQUIPE
 - Diego Francisco
 - Davi Penna
 
-LINK DA PUBLICACAO
+LINK DA PUBLICACAO: https://bheexplorer.netlify.app/
 ------------------
 Acesso ao projeto em producao: 
 
