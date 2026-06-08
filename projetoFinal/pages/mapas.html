@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/mapa.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Mapa Interativo - BH Explorer</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="containerIcon">
+                <a href="../index.html"><img class="logoMenu" src="../images/BHEXPLORER.png" alt="Logo"></a>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="menus" id="nav-menus">
+                <a href="../pages/explorar.html"><i class="fa-regular fa-compass"></i>Explorar</a>
+                <a href="../index.html#categorias"><i class="fa-solid fa-list"></i>Categorias</a>
+                <a href="../pages/mapas.html"><i class="fa-regular fa-map"></i>Mapas</a>
+                <a href="../pages/tabela.html"><i class="fa-solid fa-dollar-sign"></i>Tabela Locais</a>
+                <a href="../pages/calculadora.html"><i class="fa-solid fa-calculator"></i>Calcular gastos</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="containerMapa">
+            <div class="cabecalho-mapa">
+                <h2>Mapa de Exploração</h2>
+                <p>Navegue pelo nosso mapa interativo oficial e descubra as melhores rotas em Belo Horizonte.</p>
+            </div>
+
+            <div class="mapa-google-wrapper">
+
+                <iframe
+                    src="https://www.google.com/maps/d/embed?mid=1NSl-qOoWa6abKheGswK7IJRosqwc2Ec&ehbc=2E312F&noprof=1"
+                    width="640" height="480"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footerTop">
+            <div class="footerBrand">
+                <a href="../index.html"><img class="logoFooter" src="../images/BHEXPLORER.png"
+                        alt="Logo BH Explorer"></a>
+                <p>Descubra o melhor da cultura, gastronomia e entretenimento da capital mineira com nossa plataforma.
+                    Feito para quem ama BH.</p>
+                <div class="redesSociais">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footerLinks">
+                <h4>Navegação</h4>
+                <a href="../pages/explorar.html">Explorar</a>
+                <a href="../index.html#categorias">Categorias</a>
+                <a href="../pages/mapas.html">Mapas</a>
+                <a href="../pages/sobreNos.html">Sobre nós</a>
+            </div>
+
+            <div class="footerContato">
+                <h4>Contato</h4>
+                <p><i class="fa-solid fa-envelope"></i> contato@bhexplorer.com.br</p>
+                <p><i class="fa-solid fa-location-dot"></i> Belo Horizonte, MG</p>
+            </div>
+        </div>
+
+        <div class="footerBottom">
+            <p>© 2026 BH Explorer. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="hamburguer.js"></script>
+</body>
+
+</html>

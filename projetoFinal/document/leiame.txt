@@ -1,23 +1,80 @@
-Integrantes: Mateus Henrique, Diego Francisco, Davi Penna
-Tema: Lugares culturais em belo horizonte e região separado por categorias
-Descrição: Website que mostra pontos culturais de acordo com a categoria, sendo dividido em 8 categorias, sendo eles:
+DOCUMENTACAO DO PROJETO: GUIA CULTURAL DE BELO HORIZONTE E REGIAO
 
-* Gastronomia
-* Cultura
-* Música
-* Geek
-* Natureza
-* Vida Noturna
-* Eventos
-* Arte
+INTEGRANTES DA EQUIPE
+---------------------
+- Mateus Henrique da Cruz Oliveira
+- Diego Francisco
+- Davi Penna
 
-A pagina home deve conter os seguintes elementos:
-* Um cabeçalho com a logo e links para explorar, categorias e mapa
-* Um footer com logo, sobre nós e projeto.
+LINK DA PUBLICACAO
+------------------
+Acesso ao projeto em producao: 
 
-Ao clicar em uma categoria, será mostrado em cards os lugares que bate com aquela categoria filtrada
 
-Nos cards dos lugares deve ser mostrado o nome do local, a localização, uma pequena descrição e uma imagem do local. Ao clicar em cima de algum card, uma nova guia deve ser aberta para mostrar as informações do local em especifico, nela deve conter: 4 imagens sendo exibidas Nome do local no título Localização e categoria do local Uma descrição do local As avaliações que o local possui com base nas estrelas
-Ao todo são 12 paginas replicando o mesmo elemento, mudando apenas as informações específicas daquele local
+SOBRE O PROJETO
+===============
+O projeto consiste em um portal web dedicado a mapear e divulgar espacos e eventos culturais em Belo Horizonte e regiao metropolitana. O objetivo da plataforma e facilitar o acesso a cultura e ao lazer, permitindo que os usuarios explorem locais de interesse de acordo com categorias especificas, alem de oferecer ferramentas de planejamento financeiro para os passeios.
 
-Criar uma página Sobre Nós mostrando as informações de cada integrante do membro
+Categorias de Locais
+--------------------
+O conteudo esta organizado em 7 categorias principais:
+1. Gastronomia
+2. Cultura
+3. Musica
+4. Natureza
+5. Vida Noturna
+6. Eventos
+7. Arte
+
+
+ESTRUTURA E ARQUITETURA DO SITE
+===============================
+O website e composto por um total de 19 paginas, distribuidas da seguinte forma:
+
+1. Landing Page (Conhecer o Projeto)
+- Pagina focada em conversao, sem menu de navegacao (header) ou rodape (footer).
+- Contem apenas a apresentacao do projeto e um botao de acao principal (Call to Action) para acessar a plataforma completa ou sair.
+
+2. Pagina Inicial (Home)
+- Navegacao Rapida: Botoes de acesso para a "Landing Page", "Tabela de Locais", "Simulador de Gastos" e "Categorias".
+- Destaques: Secao dedicada aos locais mais populares ou recomendados.
+- Interacao: Secao com chamada e botao para preenchimento de formulario de contato/sugestao.
+
+3. Pagina Explorar
+- Exibe todos os pontos turisticos cadastrados em formato de cards.
+- Cada card e clicavel e redireciona o usuario para a pagina especifica e detalhada do respectivo local.
+
+4. Paginas de Pontos Turisticos (11 paginas individuais)
+Cada uma destas paginas segue um layout padronizado contendo:
+- Galeria de Imagens: 4 fotos do local (1 em destaque maior, 2 medias e 1 menor).
+- Cabecalho: Nome do ponto turistico, regiao de localizacao e categoria.
+- Sobre o Local: Texto descritivo e informativo sobre o ponto.
+- Painel de Informacoes (Lateral Direita):
+  * Media de preco.
+  * Horario de funcionamento.
+  * Endereco completo.
+  * Telefone de contato.
+  * Link clicavel para o site oficial do local.
+  * Botao "Como Chegar" (redireciona para a rota no Google Maps).
+- Sistema de Avaliacoes:
+  * Exibicao das avaliacoes anteriores.
+  * Formulario interativo para novas avaliacoes (campos: nome, nota e texto com limite de 3.000 caracteres).
+  * A nova avaliacao e renderizada na pagina assim que o formulario e enviado.
+
+5. Pagina de Mapa Interativo
+- Interface visual baseada em mapa contendo marcacoes (pins) de todos os pontos turisticos catalogados no site.
+
+6. Pagina de Tabela de Locais
+- Lista em formato de tabela para consulta rapida.
+- Apresenta um resumo com informacoes essenciais dos pontos: Nome, Categoria, Bairro e Nota de avaliacao.
+
+7. Simulador de Gastos
+- Ferramenta interativa de orcamento para auxiliar o usuario no planejamento do passeio.
+- Campos de entrada: Numero de pessoas, valor estimado da alimentacao por pessoa, valor do ingresso por pessoa e custo total do transporte.
+- Ao clicar em "Calcular Gastos", o sistema processa os dados e exibe o orcamento final do roteiro.
+
+8. Pagina de Envio de Formulario
+- Espaco dedicado para envio de novos locais para serem adicionados na página.
+
+9. Pagina Sobre Nos
+- Apresentacao da equipe de desenvolvimento, contendo informacoes sobre os 3 integrantes do projeto (Mateus, Diego e Davi).
