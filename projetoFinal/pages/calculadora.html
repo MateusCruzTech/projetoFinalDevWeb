@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/calculadora.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Calculadora de Gastos - BH Explorer</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="containerIcon">
+                <a href="../index.html"><img class="logoMenu" src="../images/BHEXPLORER.png" alt="Logo"></a>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="menus" id="nav-menus">
+                <a href="../pages/explorar.html"><i class="fa-regular fa-compass"></i>Explorar</a>
+                <a href="../index.html#categorias"><i class="fa-solid fa-list"></i>Categorias</a>
+                <a href="../pages/mapas.html"><i class="fa-regular fa-map"></i>Mapas</a>
+                <a href="../pages/tabela.html"><i class="fa-solid fa-dollar-sign"></i>Tabela Locais</a>
+                <a href="../pages/calculadora.html"><i class="fa-solid fa-calculator"></i>Calcular gastos</a>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="containerCalculadora">
+            <div class="calculadora-card">
+                <h2>Simulador de Orçamento</h2>
+                <p>Planeje seu roteiro! Informe as estimativas abaixo e calcularemos o custo aproximado do passeio para
+                    o seu grupo.</p>
+
+                <form id="formCalculadora">
+                    <div class="input-group">
+                        <label for="numPessoas"><i class="fa-solid fa-users"></i> Número de Pessoas</label>
+                        <input type="number" id="numPessoas" min="1" value="1" placeholder="Ex: 3">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="valAlimentacao"><i class="fa-solid fa-utensils"></i> Alimentação (por
+                            pessoa)</label>
+                        <input type="number" id="valAlimentacao" min="0" placeholder="R$ 0,00">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="valIngresso"><i class="fa-solid fa-ticket"></i> Ingressos (por pessoa)</label>
+                        <input type="number" id="valIngresso" min="0" placeholder="R$ 0,00">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="valTransporte"><i class="fa-solid fa-car"></i> Transporte (valor total do
+                            grupo)</label>
+                        <input type="number" id="valTransporte" min="0" placeholder="R$ 0,00">
+                    </div>
+
+                    <button type="button" class="btn-primary" onclick="calcularGastos()"
+                        style="width: 100%; font-size: 18px;">
+                        <i class="fa-solid fa-calculator"></i> Calcular Total
+                    </button>
+                </form>
+
+                <div id="resultadoCalculo" class="resultado-oculto">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footerTop">
+            <div class="footerBrand">
+                <a href="../index.html"><img class="logoFooter" src="../images/BHEXPLORER.png"
+                        alt="Logo BH Explorer"></a>
+                <p>Descubra o melhor da cultura, gastronomia e entretenimento da capital mineira com nossa plataforma.
+                    Feito para quem ama BH.</p>
+                <div class="redesSociais">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footerLinks">
+                <h4>Navegação</h4>
+                <a href="../pages/explorar.html">Explorar</a>
+                <a href="../index.html#categorias">Categorias</a>
+                <a href="../pages/mapas.html">Mapas</a>
+                <a href="../pages/sobreNos.html">Sobre nós</a>
+            </div>
+
+            <div class="footerContato">
+                <h4>Contato</h4>
+                <p><i class="fa-solid fa-envelope"></i> contato@bhexplorer.com.br</p>
+                <p><i class="fa-solid fa-location-dot"></i> Belo Horizonte, MG</p>
+            </div>
+        </div>
+
+        <div class="footerBottom">
+            <p>© 2026 BH Explorer. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function calcularGastos() {
+            let pessoas = parseInt(document.getElementById('numPessoas').value) || 0;
+            let alimentacao = parseFloat(document.getElementById('valAlimentacao').value) || 0;
+            let ingresso = parseFloat(document.getElementById('valIngresso').value) || 0;
+            let transporte = parseFloat(document.getElementById('valTransporte').value) || 0;
+
+
+            let custoPorPessoa = alimentacao + ingresso;
+            let total = (pessoas * custoPorPessoa) + transporte;
+
+
+            let divResultado = document.getElementById('resultadoCalculo');
+
+            if (pessoas < 1) {
+                divResultado.innerHTML = "<p style='color: red;'>Por favor, insira pelo menos 1 pessoa no grupo.</p>";
+            } else {
+
+                let totalFormatado = total.toFixed(2).replace('.', ',');
+
+                divResultado.innerHTML = `
+                    <h3>Resumo do Passeio</h3>
+                    <p>O roteiro para <strong>${pessoas} pessoa(s)</strong> custará aproximadamente:</p>
+                    <div class="valor-final">R$ ${totalFormatado}</div>
+                `;
+            }
+
+
+            divResultado.className = 'resultado-box';
+        }
+    </script>
+    <script src="hamburguer.js"></script>
+</body>
+
+</html>
