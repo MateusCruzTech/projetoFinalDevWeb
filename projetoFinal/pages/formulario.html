@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/formulario.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <title>Cadastrar Local - BH Explorer</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="containerIcon">
+                <a href="../index.html"><img class="logoMenu" src="../images/BHEXPLORER.png" alt="Logo"></a>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="menus" id="nav-menus">
+                <a href="../pages/explorar.html"><i class="fa-regular fa-compass"></i>Explorar</a>
+                <a href="../index.html#categorias"><i class="fa-solid fa-list"></i>Categorias</a>
+                <a href="../pages/mapas.html"><i class="fa-regular fa-map"></i>Mapas</a>
+                <a href="../pages/tabela.html"><i class="fa-solid fa-dollar-sign"></i>Tabela Locais</a>
+                <a href="../pages/calculadora.html"><i class="fa-solid fa-calculator"></i>Calcular gastos</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="containerFormPage">
+            <div class="form-cabecalho">
+                <h2>Cadastrar Novo Local</h2>
+                <p>Conhece um pico incrível em BH que ainda não está no mapa? Preencha os dados abaixo e ajude nossa
+                    comunidade a crescer!</p>
+            </div>
+
+            <form id="formCadastroLocal" method="get" action="#"
+                onsubmit="alert('Obrigado! Seu local foi enviado para análise e em breve aparecerá no BH Explorer.'); return false;">
+
+                <div class="form-grid">
+
+                    <div class="input-group full-width">
+                        <label for="nomeLocal"><i class="fa-solid fa-store"></i> Nome do Local</label>
+                        <input type="text" id="nomeLocal" placeholder="Ex: Mercado Central" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="categoriaLocal"><i class="fa-solid fa-tags"></i> Categoria</label>
+                        <select id="categoriaLocal" required>
+                            <option value="" disabled selected>Selecione uma categoria...</option>
+                            <option value="gastronomia">Gastronomia</option>
+                            <option value="cultura">Cultura</option>
+                            <option value="musica">Música</option>
+                            <option value="geek">Geek</option>
+                            <option value="natureza">Natureza</option>
+                            <option value="vida-noturna">Vida Noturna</option>
+                            <option value="eventos">Eventos</option>
+                            <option value="arte">Arte</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="regiaoLocal"><i class="fa-solid fa-map-location-dot"></i> Região</label>
+                        <select id="regiaoLocal" required>
+                            <option value="" disabled selected>Selecione a região...</option>
+                            <option value="centro-sul">Centro-Sul</option>
+                            <option value="pampulha">Pampulha</option>
+                            <option value="leste">Leste</option>
+                            <option value="oeste">Oeste</option>
+                            <option value="norte">Norte</option>
+                            <option value="nordeste">Nordeste</option>
+                            <option value="noroeste">Nordeste</option>
+                            <option value="barreiro">Barreiro</option>
+                            <option value="venda-nova">Venda Nova</option>
+                            <option value="metropolitana">Região Metropolitana</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="enderecoLocal"><i class="fa-solid fa-location-dot"></i> Endereço Completo</label>
+                        <input type="text" id="enderecoLocal"
+                            placeholder="Ex: Av. Fleming, 240 - Ouro Preto, Belo Horizonte - MG, 31310-490" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="horarioLocal"><i class="fa-regular fa-clock"></i> Horário de funcionamento</label>
+                        <input type="text" id="horarioLocal" placeholder="Ex: Seg a Dom: 17:00 - 02:00" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="precoLocal"><i class="fa-solid fa-money-bill-wave"></i> Média de Preço</label>
+                        <select id="precoLocal" required>
+                            <option value="" disabled selected>Selecione o custo...</option>
+                            <option value="$">$ (Econômico)</option>
+                            <option value="$$">$$ (Moderado)</option>
+                            <option value="$$$">$$$ (Caro)</option>
+                            <option value="$$$$">$$$$ (Muito Caro/Luxo)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="telefoneLocal"><i class="fa-solid fa-phone"></i> Telefone</label>
+                        <input type="text" id="telefoneLocal" placeholder="Ex: +55 (31) 98352-2366">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="siteLocal"><i class="fa-solid fa-globe"></i> Site ou Instagram</label>
+                        <input type="url" id="siteLocal" placeholder="Ex: https://www.exemplo.com.br">
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="mapsLocal"><i class="fa-solid fa-location-arrow"></i> Link "Como Chegar" (Google
+                            Maps)</label>
+                        <input type="url" id="mapsLocal"
+                            placeholder="Cole aqui o link de compartilhamento do Google Maps">
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="sobreLocal"><i class="fa-solid fa-align-left"></i> Sobre o local</label>
+                        <textarea id="sobreLocal" rows="4"
+                            placeholder="Descreva por que esse lugar é especial, o que tem de bom por lá, pratos famosos, etc..."
+                            required></textarea>
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label for="fotosLocal"><i class="fa-solid fa-camera"></i> Upload de Fotos</label>
+                        <input type="file" id="fotosLocal" accept="image/*" multiple class="file-upload">
+                        <p class="dica-file">Você pode selecionar várias imagens segurando a tecla CTRL.</p>
+                    </div>
+
+                    <div class="full-width" style="margin-top: 20px;">
+                        <button type="submit" class="btn-primary" style="width: 100%; font-size: 18px; padding: 18px;">
+                            <i class="fa-solid fa-paper-plane"></i> Enviar Sugestão de Local
+                        </button>
+                    </div>
+
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footerTop">
+            <div class="footerBrand">
+                <a href="../index.html"><img class="logoFooter" src="../images/BHEXPLORER.png"
+                        alt="Logo BH Explorer"></a>
+                <p>Descubra o melhor da cultura, gastronomia e entretenimento da capital mineira com nossa plataforma.
+                    Feito para quem ama BH.</p>
+                <div class="redesSociais">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footerLinks">
+                <h4>Navegação</h4>
+                <a href="../pages/explorar.html">Explorar</a>
+                <a href="../index.html#categorias">Categorias</a>
+                <a href="../pages/mapas.html">Mapas</a>
+                <a href="../pages/sobreNos.html">Sobre nós</a>
+            </div>
+
+            <div class="footerContato">
+                <h4>Contato</h4>
+                <p><i class="fa-solid fa-envelope"></i> contato@bhexplorer.com.br</p>
+                <p><i class="fa-solid fa-location-dot"></i> Belo Horizonte, MG</p>
+            </div>
+        </div>
+
+        <div class="footerBottom">
+            <p>© 2026 BH Explorer. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <script src="hamburguer.js"></script>
+</body>
+
+</html>

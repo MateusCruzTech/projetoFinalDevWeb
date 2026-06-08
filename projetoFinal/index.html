@@ -13,61 +13,85 @@
     <header>
         <div class="container">
             <div class="containerIcon">
-                <img class="logoMenu" src="images/logoProjeto.png" alt="Logo">
+                <a href="index.html"><img class="logoMenu" src="images/BHEXPLORER.png" alt="Logo"></a>
             </div>
 
-            <div class="menus">
-                <a href=""><i class="fa-regular fa-compass"></i>Explorar</a>
-                <a href=""><i class="fa-solid fa-list"></i>Categorias</a>
-                <a href=""><i class="fa-regular fa-map"></i>Mapas</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <div class="menus" id="nav-menus">
+                <a href="pages/explorar.html"><i class="fa-regular fa-compass"></i>Explorar</a>
+                <a href="#categorias"><i class="fa-solid fa-list"></i>Categorias</a>
+                <a href="pages/mapas.html"><i class="fa-regular fa-map"></i>Mapas</a>
+                <a href="pages/tabela.html"><i class="fa-solid fa-dollar-sign"></i>Tabela Locais</a>
+                <a href="pages/calculadora.html"><i class="fa-solid fa-calculator"></i>Calcular gastos</a>
             </div>
         </div>
     </header>
     <main>
         <section class="bannerContainer">
-            <img class="containerImgHome" src="images/imagemExibicao.avif" alt="">
+            <img class="containerImgHome" src="images/imagemExibicao.avif" alt="Imagem de um quarto">
         </section>
 
         <section class="containerSobre">
-            <h3>Sobre nós</h3>
-            <p>Nosso intuito é mostrar de forma facíl e repida os melhores pontos turisticos e eventos da região de Belo Horizonte, com mecanismos de filtos por categorias, avaliações e mapa para facilitar na hora da navegação, você também pode cadastrar um local preenchendo o nosso formulário.</p>
-          
-        </section>
+            <div class="sobreConteudo">
+                <h3>Sobre nós</h3>
+                <p>Nosso intuito é mostrar de forma fácil e rápida os melhores pontos turísticos e eventos da região de
+                    Belo Horizonte. Com mecanismos de filtros por categorias, avaliações e mapas interativos,
+                    facilitamos a sua navegação na hora de montar o roteiro ideal.</p>
 
-        <section class="containerCategorias">
+                <div class="sobreBotoes">
+                    <a href="pages/landingPage.html" class="btn-primary">
+                        <i class="fa-solid fa-rocket"></i> Conhecer o Projeto
+                    </a>
+
+                    <a href="pages/tabela.html" class="btn-secondary">
+                        <i class="fa-solid fa-table-list"></i> Tabela de Locais
+                    </a>
+
+                    <a href="pages/calculadora.html" class="btn-secondary">
+                        <i class="fa-solid fa-calculator"></i> Simular Gastos
+                    </a>
+                </div>
+            </div>
+
+            <div class="sobreImagem">
+                <img src="images/BHEXPLORER.png" alt="Explorando Belo Horizonte">
+            </div>
+        </section>
+        <hr class="linhaDivisoria">
+        <section id="categorias" class="containerCategorias">
             <h2>O que você procura?</h2>
             <p>Navegue por nossas categorias e encontre a atividade perfeita para o seu roteiro.</p>
 
             <ul class="categoriasContainer">
-                <li class="categoria-card">
+                <li class="categoria-card" onclick="window.location.href='pages/explorar.html?categoria=gastronomia'">
                     <i class="fa-solid fa-utensils"></i>
                     <span>Gastronomia</span>
                 </li>
-                <li class="categoria-card">
+                <li class="categoria-card" onclick="window.location.href='pages/explorar.html?categoria=cultura'">
                     <i class="fa-solid fa-building-columns"></i>
                     <span>Cultura</span>
                 </li>
-                <li class="categoria-card">
+                <li class="categoria-card" onclick="window.location.href='pages/explorar.html?categoria=musica'">
                     <i class="fa-solid fa-music"></i>
                     <span>Música</span>
                 </li>
-                <li class="categoria-card">
-                    <i class="fa-solid fa-gamepad"></i>
-                    <span>Geek</span>
-                </li>
-                <li class="categoria-card">
+   
+                <li class="categoria-card" onclick="window.location.href='pages/explorar.html?categoria=natureza'">
                     <i class="fa-solid fa-tree"></i>
                     <span>Natureza</span>
                 </li>
-                <li class="categoria-card">
+                <li class="categoria-card" onclick="window.location.href='pages/explorar.html?categoria=vida-noturna'">
                     <i class="fa-solid fa-wine-glass"></i>
                     <span>Vida Noturna</span>
                 </li>
-                <li class="categoria-card">
+                <li class="categoria-card" onclick="window.location.href='pages/explorar.html?categoria=eventos'">
                     <i class="fa-solid fa-calendar"></i>
                     <span>Eventos</span>
                 </li>
-                <li class="categoria-card">
+                <li class="categoria-card" onclick="window.location.href='pages/explorar.html?categoria=arte'">
                     <i class="fa-solid fa-palette"></i>
                     <span>Arte</span>
                 </li>
@@ -78,79 +102,94 @@
             <p>Os destinos mais bem avaliados pelos nossos usuários esta semana.</p>
 
             <ul class="lugaresContainer">
-                <li class="lugares-card">
-                    <img class="img_lugares" src="images/imagemExibicao.avif" alt="">
-                    <span class="tituloLocalDestaque">Mercado Central</span>
-                    <div class="localizacao">
-                        <i class="fa-solid fa-palette"></i>
-                        <span class="endereco">Av. Augusto de Lima, 744 - Centro</span>
-                    </div>
-                    <span>Tradicional mercado famoso pelos queijos, artesanato, cachaças e pratos</span>
+                <li class="lugares-card"><a href="pages/mercadoCentral.html" target="_blank">
+                        <img class="img_lugares" src="images/imagemExibicao.avif" alt="Imagem do mercado central">
+                        <span class="tituloLocalDestaque">Mercado Central</span>
+                        <div class="localizacao">
+                            <i class="fa-solid fa-palette"></i>
+                            <span class="endereco">Av. Augusto de Lima, 744 - Centro</span>
+                        </div>
+                        <span>Tradicional mercado famoso pelos queijos, artesanato, cachaças e pratos</span>
+                    </a>
                 </li>
-                <li class="lugares-card">
-                    <img class="img_lugares" src="images/2 Praça da Liberdade/praca-da-liberdade-bh.webp" alt="">
-                    <span class="tituloLocalDestaque">Praça da Liberdade</span>
-                    <div class="localizacao">
-                        <i class="fa-solid fa-palette"></i>
-                        <span class="endereco">Praça da liberdade</span>
-                    </div>
-                    <span>Coração do circuito cultural de BH, com jardins inspirados em Versalhes e cercado por
-                        museus.</span>
+                <li class="lugares-card"><a href="pages/pracaDaLiberdade.html" target="_blank">
+                        <img class="img_lugares" src="images/2 Praça da Liberdade/praca-da-liberdade-bh.webp" alt="Imagem da praça da liberdade">
+                        <span class="tituloLocalDestaque">Praça da Liberdade</span>
+                        <div class="localizacao">
+                            <i class="fa-solid fa-palette"></i>
+                            <span class="endereco">Praça da liberdade</span>
+                        </div>
+                        <span>Coração do circuito cultural de BH, com jardins inspirados em Versalhes e cercado por
+                            museus.</span>
+                    </a>
                 </li>
-                <li class="lugares-card">
-                    <img class="img_lugares" src="images/3 Parque das mangabeiras/images.jpg" alt="">
-                    <span class="tituloLocalDestaque">Parque das Mangabeiras</span>
-                    <div class="localizacao">
-                        <i class="fa-solid fa-palette"></i>
-                        <span class="endereco">Av. José do Patrocínio Pontes, 580 - Mangabeiras</span>
-                    </div>
-                    <span>Maior parque da cidade, ideal para trilhas, piqueniques e vistas panorâmicas de Belo
-                        Horizonte.</span>
+                <li class="lugares-card"><a href="pages/parqueMangabeiras.html" target="_blank">
+                        <img class="img_lugares" src="images/3 Parque das mangabeiras/7178285012_92a269347b_k.jpg"
+                            alt="imagem do parque das mangabeiras">
+                        <span class="tituloLocalDestaque">Parque das Mangabeiras</span>
+                        <div class="localizacao">
+                            <i class="fa-solid fa-palette"></i>
+                            <span class="endereco">Av. José do Patrocínio Pontes, 580 - Mangabeiras</span>
+                        </div>
+                        <span>Maior parque da cidade, ideal para trilhas, piqueniques e vistas panorâmicas de Belo
+                            Horizonte.</span>
+                    </a>
                 </li>
-                <li class="lugares-card">
-                    <img class="img_lugares" src="images/4 Maletta/mal-8.jpg" alt="">
-                    <span class="tituloLocalDestaque">Maletta</span>
-                    <div class="localizacao">
-                        <i class="fa-solid fa-palette"></i>
-                        <span class="endereco">Av. Augusto de Lima, 233 - Centro</span>
-                    </div>
-                    <span>Edifício histórico com dezenas de bares no varandão, sebos e restaurantes.</span>
+                <li class="lugares-card"><a href="pages/maletta.html" target="_blank">
+                        <img class="img_lugares" src="images/4 Maletta/mal-8.jpg" alt="imagem do malleta">
+                        <span class="tituloLocalDestaque">Maletta</span>
+                        <div class="localizacao">
+                            <i class="fa-solid fa-palette"></i>
+                            <span class="endereco">Av. Augusto de Lima, 233 - Centro</span>
+                        </div>
+                        <span>Edifício histórico com dezenas de bares no varandão, sebos e restaurantes.</span>
                 </li>
-            </ul>
+            </ul></a>
         </section>
         <section class="containerFormulario">
-            <h3>Formulário</h3>
-            <p>Preencha o formulário e adiciono o seu local</p>
-            <a href="">Formulário</a>
+            <div class="conteudoCta">
+                <h3>Conhece um lugar incrível em BH?</h3>
+                <p>Ajude-nos a mapear os melhores picos da cidade. Preencha nosso formulário e adicione o seu local
+                    favorito na nossa plataforma.</p>
+                <a href="pages/formulario.html" class="btn-cta">
+                    <i class="fa-solid fa-paper-plane"></i> Cadastrar Local
+                </a>
+            </div>
         </section>
     </main>
     <footer>
-        <div class="containerFooter">
-            <div class="containerElementosEsq">
-                <div class="containerIcon">
-                    <img class="logoFooter" src="images/logoProjeto.png" alt="Logo">
-                    <p>Descubra o melhor da cultura, gastronomia<br>
-                        e entretenimento da capital mineira com nossa<br>
-                        plataforma.</p>
-                </div>
+        <div class="footerTop">
+            <div class="footerBrand">
+                <a href="index.html"><img class="logoFooter" src="images/BHEXPLORER.png" alt="Logo BH Explorer"></a>
+                <p>Descubra o melhor da cultura, gastronomia e entretenimento da capital mineira com nossa plataforma.
+                    Feito para quem ama BH.</p>
                 <div class="redesSociais">
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-twitter"></i>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 </div>
-
-                <p class="direitos">
-                    © 2026 BH Explorer. Todos os direitos reservados.
-                </p>
             </div>
-            <div class="menusFooter">
-                <a href="">Projeto</a>
-                <a href="">Sobre nós</a>
-                <a href="">Mapas</a>
+
+            <div class="footerLinks">
+                <h4>Navegação</h4>
+                <a href="pages/explorar.html">Explorar</a>
+                <a href="#categorias">Categorias</a>
+                <a href="pages/mapas.html">Mapas</a>
+                <a href="pages/sobreNos.html">Sobre nós</a>
+            </div>
+
+            <div class="footerContato">
+                <h4>Contato</h4>
+                <p><i class="fa-solid fa-envelope"></i> contato@bhexplorer.com.br</p>
+                <p><i class="fa-solid fa-location-dot"></i> Belo Horizonte, MG</p>
             </div>
         </div>
 
+        <div class="footerBottom">
+            <p>© 2026 BH Explorer. Todos os direitos reservados.</p>
+        </div>
     </footer>
+    <script src="/projetoFinal/pages/hamburguer.js"></script>
 </body>
 
 </html>
