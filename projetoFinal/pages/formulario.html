@@ -41,18 +41,18 @@
             </div>
 
             <form id="formCadastroLocal" method="get" action="#"
-                onsubmit="alert('Obrigado! Seu local foi enviado para análise e em breve aparecerá no BH Explorer.'); return false;">
+                onsubmit="alert('Obrigado! Seu local foi enviado para análise e em breve aparecerá no BH Explorer.');">
 
                 <div class="form-grid">
 
                     <div class="input-group full-width">
                         <label for="nomeLocal"><i class="fa-solid fa-store"></i> Nome do Local</label>
-                        <input type="text" id="nomeLocal" placeholder="Ex: Mercado Central" required>
+                        <input type="text" id="nomeLocal" name="nome" placeholder="Ex: Mercado Central" required>
                     </div>
 
                     <div class="input-group">
                         <label for="categoriaLocal"><i class="fa-solid fa-tags"></i> Categoria</label>
-                        <select id="categoriaLocal" required>
+                        <select id="categoriaLocal" name="categoria" required>
                             <option value="" disabled selected>Selecione uma categoria...</option>
                             <option value="gastronomia">Gastronomia</option>
                             <option value="cultura">Cultura</option>
@@ -67,7 +67,7 @@
 
                     <div class="input-group">
                         <label for="regiaoLocal"><i class="fa-solid fa-map-location-dot"></i> Região</label>
-                        <select id="regiaoLocal" required>
+                        <select id="regiaoLocal" name="regiao" required>
                             <option value="" disabled selected>Selecione a região...</option>
                             <option value="centro-sul">Centro-Sul</option>
                             <option value="pampulha">Pampulha</option>
@@ -75,7 +75,7 @@
                             <option value="oeste">Oeste</option>
                             <option value="norte">Norte</option>
                             <option value="nordeste">Nordeste</option>
-                            <option value="noroeste">Nordeste</option>
+                            <option value="noroeste">Noroeste</option>
                             <option value="barreiro">Barreiro</option>
                             <option value="venda-nova">Venda Nova</option>
                             <option value="metropolitana">Região Metropolitana</option>
@@ -84,18 +84,19 @@
 
                     <div class="input-group full-width">
                         <label for="enderecoLocal"><i class="fa-solid fa-location-dot"></i> Endereço Completo</label>
-                        <input type="text" id="enderecoLocal"
+                        <input type="text" id="enderecoLocal" name="endereco"
                             placeholder="Ex: Av. Fleming, 240 - Ouro Preto, Belo Horizonte - MG, 31310-490" required>
                     </div>
 
                     <div class="input-group">
                         <label for="horarioLocal"><i class="fa-regular fa-clock"></i> Horário de funcionamento</label>
-                        <input type="text" id="horarioLocal" placeholder="Ex: Seg a Dom: 17:00 - 02:00" required>
+                        <input type="text" id="horarioLocal" name="horario" placeholder="Ex: Seg a Dom: 17:00 - 02:00"
+                            required>
                     </div>
 
                     <div class="input-group">
                         <label for="precoLocal"><i class="fa-solid fa-money-bill-wave"></i> Média de Preço</label>
-                        <select id="precoLocal" required>
+                        <select id="precoLocal" name="preco" required>
                             <option value="" disabled selected>Selecione o custo...</option>
                             <option value="$">$ (Econômico)</option>
                             <option value="$$">$$ (Moderado)</option>
@@ -106,31 +107,31 @@
 
                     <div class="input-group">
                         <label for="telefoneLocal"><i class="fa-solid fa-phone"></i> Telefone</label>
-                        <input type="text" id="telefoneLocal" placeholder="Ex: +55 (31) 98352-2366">
+                        <input type="text" id="telefoneLocal" name="telefone" placeholder="Ex: +55 (31) 98352-2366">
                     </div>
 
                     <div class="input-group">
                         <label for="siteLocal"><i class="fa-solid fa-globe"></i> Site ou Instagram</label>
-                        <input type="url" id="siteLocal" placeholder="Ex: https://www.exemplo.com.br">
+                        <input type="url" id="siteLocal" name="site" placeholder="Ex: https://www.exemplo.com.br">
                     </div>
 
                     <div class="input-group full-width">
                         <label for="mapsLocal"><i class="fa-solid fa-location-arrow"></i> Link "Como Chegar" (Google
                             Maps)</label>
-                        <input type="url" id="mapsLocal"
+                        <input type="url" id="mapsLocal" name="maps"
                             placeholder="Cole aqui o link de compartilhamento do Google Maps">
                     </div>
 
                     <div class="input-group full-width">
                         <label for="sobreLocal"><i class="fa-solid fa-align-left"></i> Sobre o local</label>
-                        <textarea id="sobreLocal" rows="4"
+                        <textarea id="sobreLocal" name="sobre" rows="4"
                             placeholder="Descreva por que esse lugar é especial, o que tem de bom por lá, pratos famosos, etc..."
                             required></textarea>
                     </div>
 
                     <div class="input-group full-width">
                         <label for="fotosLocal"><i class="fa-solid fa-camera"></i> Upload de Fotos</label>
-                        <input type="file" id="fotosLocal" accept="image/*" multiple class="file-upload">
+                        <input type="file" id="fotosLocal" name="fotos" accept="image/*" multiple class="file-upload">
                         <p class="dica-file">Você pode selecionar várias imagens segurando a tecla CTRL.</p>
                     </div>
 
