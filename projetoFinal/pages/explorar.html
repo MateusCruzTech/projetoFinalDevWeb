@@ -191,7 +191,7 @@
                     </a>
                 </li>
 
-              
+
 
             </ul>
         </section>
@@ -231,47 +231,11 @@
         </div>
     </footer>
 
-    <script src="hamburguer.js"></script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const parametros = new URLSearchParams(window.location.search);
-            let categoriaBuscada = parametros.get("categoria");
-
-            if (categoriaBuscada) {
-
-                categoriaBuscada = categoriaBuscada.toLowerCase().trim();
-
-                const todosOsCards = document.querySelectorAll(".lugares-card");
-                let encontrouAlgum = false;
-
-                todosOsCards.forEach(card => {
-                    let categoriaDoCard = card.getAttribute("data-categoria");
-
-                    if (categoriaDoCard) {
-                        categoriaDoCard = categoriaDoCard.toLowerCase().trim();
-
-                        if (categoriaDoCard === categoriaBuscada) {
-                            card.classList.add("card-destacado");
-                            card.style.display = "flex";
-                            encontrouAlgum = true;
-                        } else {
-
-                            card.style.display = "none";
-                        }
-                    }
-                });
 
 
-                if (encontrouAlgum) {
-                    setTimeout(() => {
-                        document.querySelector('.lugaresContainer').scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 300);
-                }
-            }
-        });
-    </script>
-    <script src="hamburguer.js"></script>
+
+    <script src="../script/hamburguer.js"></script>
+    <script src="../script/explorar.js"></script>
 </body>
 
 </html>
